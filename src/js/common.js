@@ -1,0 +1,1 @@
+"use strict";var o;o=2,console.log(2*o);

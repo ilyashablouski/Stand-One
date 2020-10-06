@@ -18,7 +18,6 @@ const cleanCSS = require('gulp-clean-css');
 const smartgrid = require('smart-grid');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
-const ext_replace = require('gulp-ext-replace');
 
 // Globs
 const config = {
@@ -66,27 +65,26 @@ function css() {
  */
 function js() {
   return src(config.root + config.js.src)
-    .pipe(terser({
-      ecma: 6,
-      keep_fnames: false,
-      mangle: {
-        toplevel: true,
-      },
-      compress: {
-        drop_console: true,
-      },
-    }))
-    .pipe(ext_replace('.min.mjs'))
-    .pipe(rename({
-      extname: '.min.mjs', FIXME:
-    }))
-    .pipe(dest(config.js.dest))
+    // .pipe(terser({
+    //   ecma: 6,
+    //   keep_fnames: false,
+    //   mangle: {
+    //     toplevel: true,
+    //   },
+    //   compress: {
+    //     drop_console: true,
+    //   },
+    // }))
+    // .pipe(rename({
+    //   extname: '.min.mjs',
+    // }))
+    // .pipe(dest(config.js.dest))
     .pipe(babel())
     .pipe(uglify({
       toplevel: true,
     }))
     .pipe(rename({
-      extname: '.js', FIXME:
+      extname: '.js',
     }))
     .pipe(dest(config.js.dest));
 }
