@@ -11,6 +11,7 @@ const {
 const less = require('gulp-less');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+// eslint-disable-next-line no-unused-vars
 const terser = require('gulp-terser');
 const gcmq = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
