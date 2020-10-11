@@ -374,6 +374,7 @@ a {
 .h2 {
   font-size: 4.8rem;
   font-weight: 700;
+  color: #000000;
 }
 
 .text {
@@ -446,7 +447,7 @@ a {
 }
 
 .logo {
-  font-family: 'Poppins';
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 200;
   font-size: 24px;
   color: #fafafa;
@@ -503,7 +504,7 @@ a {
   word-wrap: break-word;
   padding-left: 15px;
   padding-right: 15px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -514,6 +515,77 @@ a {
 .feature-item__down {
   font-size: 14px;
   color: #555555;
+}
+
+.section-comments {
+  position: relative;
+  background: url('../images/review-bg.jpg') no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.section-comments .h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.section-steps {
+  margin: 0 auto;
+  max-width: 1079px;
+}
+
+.steps-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: space-between;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.steps-item {
+  box-sizing: content-box;
+  word-wrap: break-word;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 0 0 33.33%;
+  max-width: 294px;
+}
+
+.steps-item__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.steps-item__text {
+  font-size: 4.8rem;
+}
+
+.steps-item__subtitle {
+  font-size: 1.4rem;
+  color: #555555;
+}
+
+.comment-block {
+  margin: 0 auto;
+  max-width: 580px;
+  text-align: center;
+}
+
+.comment-block__text {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+.avatar-item__name {
+  font-size: 15px;
+}
+
+.avatar-item__title {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
 }
 
 /*
