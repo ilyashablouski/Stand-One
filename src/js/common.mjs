@@ -241,10 +241,10 @@ function countUpInit() {
     duration: 5,
     useEasing: true,
   };
-  const numCounter1 = new CountUp('numCounter1', 30, options);
+  const numCounter1 = new CountUp('numCounter1', 12, options);
   numCounter1.start();
 
-  const numCounter2 = new CountUp('numCounter2', 40, options);
+  const numCounter2 = new CountUp('numCounter2', 16, options);
   numCounter2.start();
 
   const numCounter3 = new CountUp('numCounter3', 250, options);
