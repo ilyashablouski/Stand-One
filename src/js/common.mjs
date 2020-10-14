@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Set autoplay
-  const autoplayDelay = 5000;
+  const autoplayDelay = 10000;
   const element = document.querySelector('.glider');
 
   let autoplay = setInterval(() => {
