@@ -202,8 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Intersection Observer API
   const elements = document.querySelectorAll('[data-observable]');
-  const callback = () => {
+  const callbackCounter = () => {
+    // Counter call
     countUpInit();
+  };
+
+  const callbackShow = (target) => {
+    // Add animate for opacity call
+    animateShow(target);
   };
   const observer = new IntersectionObserver(handleIntersection);
 
@@ -220,8 +226,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleIntersection(entries, observer) {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
-        callback('observer-' + entry.target.getAttribute('data-observable'));
-        observer.unobserve(entry.target);
+        // if counter block
+        if (entry.target.classList.contains('feature-block__inner')) {
+          callbackCounter();
+          observer.unobserve(entry.target);
+          // if steps block
+        } else if (entry.target.classList.contains('steps-item')) {
+          callbackShow(entry.target);
+          observer.unobserve(entry.target);
+        }
       }
     });
   }
@@ -229,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Define functions
+
 /**
 * countUp.js
 * @see  {@link https://github.com/inorganik/CountUp.js}
@@ -250,8 +264,18 @@ function countUpInit() {
   const numCounter3 = new CountUp('numCounter3', 250, options);
   numCounter3.start();
 }
+
 /**
- *
+ * Animate opacity
+ * @param {HTMLElement} target
+ */
+function animateShow(target) {
+  target.classList.add('is-show');
+  // console.log('animate');
+}
+
+/**
+ * Choose element function
  * @param {HTMLElement} element
  * @return {HTMLElement}
  */

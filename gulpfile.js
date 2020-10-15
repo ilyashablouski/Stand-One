@@ -66,20 +66,20 @@ function css() {
  */
 function js() {
   return src(config.root + config.js.src)
-    .pipe(terser({
-      ecma: 6,
-      keep_fnames: false,
-      mangle: {
-        toplevel: true,
-      },
-      compress: {
-        drop_console: true,
-      },
-    }))
-    .pipe(rename({
-      extname: '.min.mjs',
-    }))
-    .pipe(dest(config.js.dest))
+    // .pipe(terser({
+    //   ecma: 6,
+    //   keep_fnames: false,
+    //   mangle: {
+    //     toplevel: true,
+    //   },
+    //   compress: {
+    //     drop_console: true,
+    //   },
+    // }))
+    // .pipe(rename({
+    //   extname: '.min.mjs',
+    // }))
+    // .pipe(dest(config.js.dest))
     .pipe(babel())
     .pipe(uglify({
       toplevel: true,
