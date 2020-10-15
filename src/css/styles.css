@@ -531,8 +531,9 @@ input[type='tel']:focus {
   outline: 2px solid #000000;
 }
 
-textarea {
+textarea:focus {
   resize: none;
+  outline: 2px solid #000000;
 }
 
 a {
@@ -741,31 +742,31 @@ a:not(.button):hover {
   width: 17px;
   height: 1px;
   background: #ffffff;
-  transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 .line-top {
-  margin-top: 8px;
+  transform: translateY(4px);
 }
 
 .line-bottom {
-  margin-top: -8px;
+  transform: translateY(-4px);
 }
 
 .active .line-top {
-  margin-top: 0;
+  transform: translateY(0);
   transform: rotate(45deg);
   transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 .active .line-bottom {
-  margin-top: 0;
+  transform: translateY(0);
   transform: rotate(-45deg);
   transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 .header.active {
-  height: 28%;
+  height: 235px;
   background: #000;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.5);
 }
@@ -989,6 +990,10 @@ a:not(.button):hover {
   margin-bottom: 8.2rem;
 }
 
+.steps-item.is-show {
+  opacity: 1;
+}
+
 .steps-block {
   display: flex;
   flex-wrap: wrap;
@@ -1000,6 +1005,8 @@ a:not(.button):hover {
 
 .steps-item {
   box-sizing: content-box;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   word-wrap: break-word;
   padding-left: 15px;
   padding-right: 15px;
@@ -1627,14 +1634,38 @@ input.counter__input {
     line-height: 4rem;
   }
 
+  #overlay {
+    height: 74%;
+  }
+
+  #overlay ~ #overlay-safezone {
+    height: 26%;
+  }
+
   .content__intro .h1 {
     margin-top: 10px;
+  }
+
+  .content__review {
+    padding-top: 11rem;
+  }
+
+  .content__order {
+    margin-top: 11rem;
   }
 
   .feature-item {
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
+  }
+
+  .content__comments {
+    margin-top: 11rem;
+  }
+
+  .content__steps {
+    margin-top: 11rem;
   }
 
   .content__steps .h2 {
@@ -1644,6 +1675,11 @@ input.counter__input {
   .steps-item {
     margin: 0 auto;
     flex: 0 0 100%;
+  }
+
+  .comment-block__text {
+    padding: 0 30px;
+    font-size: 2rem;
   }
 
   .order-form__button {
@@ -1664,6 +1700,10 @@ input.counter__input {
   .order-info__counter {
     margin: 0 auto;
     margin-top: 5px;
+  }
+
+  .container__footer {
+    margin-top: 11rem;
   }
 
   .footer__social-icons {

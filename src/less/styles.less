@@ -297,10 +297,9 @@ input[type='tel']:focus {
   outline: 2px solid #000000;
 }
 
-
-
-textarea {
+textarea:focus {
   resize: none;
+  outline: 2px solid #000000;
 }
 
 
@@ -638,31 +637,31 @@ a:not(.button):hover {
   width: 17px;
   height: 1px;
   background: #ffffff;
-  transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 .line-top {
-  margin-top: 8px;
+  transform: translateY(4px);
 }
 
 .line-bottom {
-  margin-top: -8px;
+  transform: translateY(-4px);
 }
 
 .active .line-top {
-  margin-top: 0;
+  transform: translateY(0);
   transform: rotate(45deg);
   transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 .active .line-bottom {
-  margin-top: 0;
+  transform: translateY(0);
   transform: rotate(-45deg);
   transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 }
 
 .header.active {
-  height: 28%;
+  height: 235px;
   background: #000;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.5);
 }
@@ -729,6 +728,12 @@ a:not(.button):hover {
   background: rgba(179, 179, 179, 0.5);
   cursor: pointer;
   z-index: 2;
+
+  .xs-block( {
+      height: 74%;
+    }
+
+  );
 }
 
 #overlay~#overlay-safezone {
@@ -739,6 +744,12 @@ a:not(.button):hover {
   height: 15%;
   background: rgba(179, 179, 179, 0.5);
   z-index: 2;
+
+  .xs-block( {
+      height: 26%;
+    }
+
+  );
 }
 
 #overlay.is-play~#overlay-safezone {
@@ -792,6 +803,12 @@ a:not(.button):hover {
     padding-top: 15rem;
     background: #f5f5f7;
 
+    .xs-block( {
+        padding-top: 11rem;
+      }
+
+    );
+
     .wrapper {
       max-width: 1017px;
     }
@@ -812,6 +829,12 @@ a:not(.button):hover {
 
   &__order {
     margin-top: 15.2rem;
+
+    .xs-block( {
+        margin-top: 11rem;
+      }
+
+    );
 
     .h2 {
       margin-bottom: 4.5rem;
@@ -896,6 +919,12 @@ a:not(.button):hover {
   background-size: cover;
   color: #ffffff;
 
+  .xs-block( {
+      margin-top: 11rem;
+    }
+
+  );
+
   &__comment-block {
     margin: 0 auto;
     padding-top: 5.5rem;
@@ -912,6 +941,12 @@ a:not(.button):hover {
   margin-top: 13.8rem;
   max-width: 1139px;
 
+  .xs-block( {
+      margin-top: 11rem;
+    }
+
+  );
+
   .h2 {
     margin-bottom: 8.2rem;
 
@@ -923,6 +958,10 @@ a:not(.button):hover {
   }
 }
 
+.steps-item.is-show {
+  opacity: 1;
+}
+
 .steps-block {
   .row-flex();
   justify-content: space-between;
@@ -931,6 +970,8 @@ a:not(.button):hover {
 
 .steps-item {
   box-sizing: content-box;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(.25, .1, .25, 1);
 
   .col-padding();
   flex: 0 0 33.33%;
@@ -976,6 +1017,8 @@ a:not(.button):hover {
   }
 }
 
+
+
 // Glider
 .glider,
 .glider-contain {
@@ -1019,14 +1062,23 @@ a:not(.button):hover {
     font-size: 2.4rem;
     line-height: 3rem;
 
+
+
+    .md-block( {
+        line-height: 3.5rem;
+      }
+
+    );
+
     .sm-block( {
         padding: 0 15px;
       }
 
     );
 
-    .md-block( {
-        line-height: 3.5rem;
+    .xs-block( {
+        padding: 0 30px;
+        font-size: 2rem;
       }
 
     );
@@ -1328,6 +1380,12 @@ input.counter__input {
 **/
 .container__footer {
   margin-top: 14.9rem;
+
+  .xs-block( {
+      margin-top: 11rem;
+    }
+
+  );
 }
 
 .footer {
