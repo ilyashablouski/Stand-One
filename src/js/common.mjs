@@ -1,6 +1,14 @@
 /* eslint-disable object-curly-spacing */
 import { CountUp } from '../lib/lib.min.js';
 
+/**
+ * Choose element function
+ * @param {HTMLElement} element
+ * @return {HTMLElement}
+ */
+
+const selectElement = (element) => document.querySelector(element);
+
 document.addEventListener('DOMContentLoaded', () => {
   // Close active overlays
   const headerElement = selectElement('.header');
@@ -271,13 +279,5 @@ function countUpInit() {
  */
 function animateShow(target) {
   target.classList.add('is-show');
-  // console.log('animate');
 }
 
-/**
- * Choose element function
- * @param {HTMLElement} element
- * @return {HTMLElement}
- */
-
-const selectElement = (element) => document.querySelector(element);
