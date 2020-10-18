@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function countUpInit() {
   const options = {
-    duration: 5,
+    duration: 4,
     useEasing: true,
   };
   const numCounter1 = new CountUp('numCounter1', 12, options);
