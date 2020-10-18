@@ -405,6 +405,12 @@ body {
 
 img {
   vertical-align: middle;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
 }
 
 .svg-sprite {
@@ -607,7 +613,7 @@ a:not(.button):hover {
 }
 
 .button:hover {
-  background: #0078F1;
+  background: #0078f1;
 }
 
 .button_sm {
@@ -1418,7 +1424,7 @@ input.counter__input {
 }
 
 .__select:hover svg path {
-  fill: #C1C1C1;
+  fill: #c1c1c1;
 }
 
 .__select__title {
