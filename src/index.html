@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="prefetch" href="#"> -->
-  <!-- <link rel="preconnect" href="#" /> -->
+  <link rel="dns-prefetch" href="https://ilyashablovsky.github.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stand ONE</title>
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
@@ -14,17 +14,19 @@
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
 
+  <link rel="preload" as="font" href="fonts/poppins-v13-latin-200.woff2" type="font/woff2" crossorigin="crossorigin">
   <link rel="preload" as="font" href="fonts/raleway-v18-latin_cyrillic-300.woff2" type="font/woff2"
     crossorigin="crossorigin">
-  <link rel="preload" as="font" href="fonts/poppins-v13-latin-200.woff2" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" as="font" href="fonts/raleway-v18-latin_cyrillic-regular.woff2" type="font/woff2"
+    crossorigin="crossorigin">
   <link rel="preload" as="font" href="fonts/raleway-v18-latin_cyrillic-500.woff2" type="font/woff2"
     crossorigin="crossorigin">
   <link rel="preload" as="font" href="fonts/raleway-v18-latin_cyrillic-600.woff2" type="font/woff2"
     crossorigin="crossorigin">
   <link rel="preload" as="font" href="fonts/raleway-v18-latin_cyrillic-700.woff2" type="font/woff2"
     crossorigin="crossorigin">
-  <link rel="stylesheet" href="css/styles.min.css">
 
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body class="container">
@@ -282,7 +284,7 @@
             <path d="M59 41.5L32.75 56.6554V26.3446L59 41.5Z" fill="#FAFAFA" />
           </svg>
         </div>
-        <video loop muted poster="images/video-preview-bg-1-min.jpg" controls class="video">
+        <video class="video" controls preload="none" loop muted poster="images/video-preview-bg-1-min.jpg">
           <source src="videos/stand one final.min@1080p.mp4" type="video/mp4" />
           <source src="videos/stand one final.min@1080p.webm" type="video/webm" />
         </video>
@@ -301,7 +303,7 @@
             <span>Easily connected and disconnected.</span> You can put the stand in&nbsp;your backpack.
           </div>
           <div class="content__review-img">
-            <img src="images/stand-1-min.png" loading="lazy" alt="Stand 1" />
+            <img data-src="images/stand-1-min.png" alt="Stand 1" />
           </div>
 
           <div class="text-block text-block_second">
@@ -316,7 +318,7 @@
           </div>
 
           <div class="content__review-img">
-            <img src="images/stand-2-min.png" loading="lazy" alt="Stand 2" />
+            <img data-src="images/stand-2-min.png" alt="Stand 2" />
           </div>
 
           <div class="feature-block wrapper__feature-block">
@@ -348,7 +350,7 @@
           </div>
 
           <div class="content__review-img content__review-img_last">
-            <img src="images/stand-with-pc-min.png" loading="lazy" alt="Stand with PC" />
+            <img data-src="images/stand-with-pc-min.png" alt="Stand with PC" />
           </div>
           <i class="link-anchor" id="order"></i>
         </div>
@@ -392,7 +394,7 @@
               <div class="comment-block content__comments__comment-block">
                 <div class="avatar-item">
                   <div class="avatar-item__img"></div>
-                  <img src="images/avatar-min.png" loading="lazy" alt="Avatar 1" />
+                  <img data-src="images/avatar-min.png" alt="Avatar 1" />
                   <div class="avatar-item__name">
                     <i class="avatar-item__country-flag"><svg class="icon icon-flag">
                         <use xlink:href="#icon-flag"></use>
@@ -413,7 +415,7 @@
               <div class="comment-block content__comments__comment-block">
                 <div class="avatar-item">
                   <div class="avatar-item__img"></div>
-                  <img src="images/avatar-min.png" loading="lazy" alt="Avatar 1" />
+                  <img data-src="images/avatar-min.png" alt="Avatar 1" />
                   <div class="avatar-item__name">
                     <i class="avatar-item__country-flag"><svg class="icon icon-flag">
                         <use xlink:href="#icon-flag"></use>
@@ -434,7 +436,7 @@
               <div class="comment-block content__comments__comment-block">
                 <div class="avatar-item">
                   <div class="avatar-item__img"></div>
-                  <img src="images/avatar-min.png" loading="lazy" alt="Avatar 1" />
+                  <img data-src="images/avatar-min.png" alt="Avatar 1" />
                   <div class="avatar-item__name">
                     <i class="avatar-item__country-flag"><svg class="icon icon-flag">
                         <use xlink:href="#icon-flag"></use>
@@ -455,7 +457,7 @@
               <div class="comment-block content__comments__comment-block">
                 <div class="avatar-item">
                   <div class="avatar-item__img"></div>
-                  <img src="images/avatar-min.png" loading="lazy" alt="Avatar 1" />
+                  <img data-src="images/avatar-min.png" alt="Avatar 1" />
                   <div class="avatar-item__name">
                     <i class="avatar-item__country-flag"><svg class="icon icon-flag">
                         <use xlink:href="#icon-flag"></use>
@@ -496,7 +498,7 @@
             <div class="order-info__wrapper">
               <div class="order-info__inner">
                 <div class="order-info_img">
-                  <img src="images/stand-preview-min.png" loading="lazy" alt="Stand preview" />
+                  <img data-src="images/stand-preview-min.png" alt="Stand preview" />
                 </div>
                 <div class="order-info__name">
                   <div class="order-info__title">MacBook Stand</div>
@@ -797,6 +799,15 @@
 
   <script src="js/common.min.js" defer nomodule></script>
 
+  <!-- Lazy loading -->
+  <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function () {
+        img.removeAttribute('data-src');
+      };
+    });
+  </script>
 </body>
 
 </html>
