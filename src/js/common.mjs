@@ -246,6 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  /**
+   * Phone validation
+   */
+  const phoneElement = selectElement('.phone-input');
+  new IMask(phoneElement, {
+    mask: '+{375}(00)000-00-00',
+  });
 });
 
 // Define functions
