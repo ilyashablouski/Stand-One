@@ -530,13 +530,15 @@
 
           <div class="form-group">
             <div class="form-group__title">Name</div>
-            <input type="text" class="form-control" name="name" required />
+            <input type="text" class="form-control" name="name" required
+              oninvalid="this.setCustomValidity('Please, fill this field.')" oninput="setCustomValidity('')" />
           </div>
 
           <div class="form-group">
             <div class="form-group__title">Phone</div>
             <input type="tel" class="form-control phone-input" name="phone" placeholder="+375(__)___-__-__"
-              pattern="^\+375\((17|29|33|44)\)[0-9]{3}-[0-9]{2}-[0-9]{2}$" required />
+              pattern="^\+375\((17|29|33|44)\)[0-9]{3}-[0-9]{2}-[0-9]{2}$" required
+              oninvalid="this.setCustomValidity('Please, fill this field.')" oninput="setCustomValidity('')" />
           </div>
 
           <div class="order-form__inner">
@@ -585,7 +587,8 @@
 
           <div class="form-group">
             <div class="form-group__title">Address</div>
-            <input type="text" class="form-control" name="adress" required />
+            <input type="text" class="form-control" name="adress" required
+              oninvalid="this.setCustomValidity('Please, fill this field.')" oninput="setCustomValidity('')" />
           </div>
 
           <div class="form-group">
@@ -802,8 +805,8 @@
   <script async src="lib/lib.min.js"></script>
   <script defer type="module" src="js/common.min.mjs"></script>
   <!-- For old browsers-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" defer nomodule></script>
-  <script defer="" nomodule="" src="lib/Glider.js/glider-compat.min.js"></script>
+  <script defer nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  <script defer nomodule="" src="lib/Glider.js/glider-compat.min.js"></script>
 
   <script src="js/common.min.js" defer nomodule></script>
 
